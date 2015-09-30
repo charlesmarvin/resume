@@ -1,0 +1,213 @@
+% Marvin Charles's Resume
+% Created: Thu Sep 20 13:00:24 EDT 2007
+% Last Modified: Thu Oct  4 19:49:24 EDT 2007
+
+\documentclass[11pt,oneside]{article}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=.75in,bmargin=.75in,lmargin=.75in,rmargin=.75in,headheight=0in,headsep=0in,footskip=.3in}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+% Name and contact information
+\newcommand{\name}{Marvin Charles}
+\newcommand{\addr}{3215 Avenue H, Apt. 12G, Brooklyn, NY 11210}
+\newcommand{\phone}{(718) 866-8424}
+\newcommand{\email}{marvin.charles@gmail.com}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+%Sets the default top level list bullet style
+\renewcommand{\labelitemi}{$\diamond$}
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+	\begin{center}\fontfamily{phv}\selectfont\LARGE\scshape#1\end{center}
+}
+
+% A ressection is a main section (<H1>Section</H1>)
+\newenvironment{ressection}[1]{
+	\vspace{4pt}
+	{\fontfamily{phv}\selectfont\large\scshape#1}
+	\begin{itemize}
+	\vspace{3pt}
+}{
+	\end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\resitem}[1]{
+	\vspace{-5pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A ressubitem is a simple list element in anything but a ressection (second level)
+\newcommand{\ressubitem}[1]{
+	\vspace{-2pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A resbigitem is a complex list element for stuff like jobs and education:
+%  Arg 1: Name of company or university
+%  Arg 2: Location
+%  Arg 3: Title and/or date range
+\newcommand{\resbigitem}[3]{
+	\vspace{-5pt}
+	\item
+	\textbf{#1}---#2 \\
+	\textit{#3}
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec}[3]{
+	\resbigitem{#1}{#2}{#3}
+	\vspace{-2pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+\newcommand{\ressubsecnoitems}[3]{
+	\resbigitem{#1}{#2}{#3}
+	\vspace{-2pt}
+}
+
+% This is a simple sublist
+\newenvironment{reslist}[1]{
+	\resitem{\textbf{#1}}
+	\vspace{-5pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now for the actual document:
+
+\begin{document}
+
+\fontfamily{ppl} \selectfont
+
+% Name with horizontal rule
+\bigname{\name}
+
+\vspace{-8pt} \rule{\textwidth}{1pt}
+
+\vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
+
+\vspace{12 pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{ressection}{Objective}
+
+%	\resitem{To obtain a software development position where I can continue building on my domain knowledge and best practices while utilizing my academic and technical skills.}
+
+%\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Education}
+
+	\begin{ressubsecnoitems}{Polytechnic Institute of NYU}{Brooklyn, NY}{MS in Computer Science: Expected May, 2011 \textbf{--GPA: 3.96}}
+	\end{ressubsecnoitems}
+
+	\begin{ressubsecnoitems}{Brooklyn College of the City University of New York}{Brooklyn, NY}{BS in Computer and Information Science: May, 2008 \textbf{--GPA: 3.79 (overall), 3.9 (CIS major)}}
+		%\ressubitem{GPA: 3.79 (overall), 3.9 (CIS major)}
+	\end{ressubsecnoitems}
+
+\end{ressection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Certification}
+
+	\resitem{\textbf{Sun Certified Programmer for the Java Platform (SCJP)}, Standard Edition 6}
+
+\end{ressection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Technical Skills}
+
+	%\resitem{\textbf{Environments:} Linux , Mac OS  X, Windows-NT/2000/XP}
+
+	\resitem{\textbf{Programming Languages:} C\#, CSS, HTML, Java, JavaScript, Perl, PHP, Python, SQL}
+
+	\resitem{\textbf{Frameworks and API:} EJB 3, JPA, JSF 2.0, JSP, Servlets, Spring 2.5}
+	
+	%\resitem{\textbf{Frameworks and API:} JDBC, JQuery, JSF/JSP, Code Igniter, CakePHP, Servlets, Struts, Spring MVC}
+	\resitem{\textbf{Application Servers:} GlassFish, Apache Tomcat }
+	\resitem{\textbf{Databases:} Oracle, MySql }
+
+\end{ressection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Relevant Experience}
+	\begin{ressubsec}{Goldman Sachs}{New York, NY}{Technology Summer Analyst: June, 2010--Aug 2010}
+		\ressubitem{Implemented application entitlement framework for bank loan servicing application.}
+		\ressubitem{Designed and implemented a dashboard for tracking external agent metrics.}
+	\end{ressubsec}
+	
+	\begin{ressubsec}{7thOnline}{New York, NY}{Software Engineer I: May, 2008--Sept 2009}
+		\ressubitem{Part of a team responsible for developing and maintaining the company's  web based Assortment Planning and Size Optimization SaaS solution.}
+		%\ressubitem{Facilitated application upgrade from J2EE 1.4 to Java EE 5.}
+		\ressubitem{Collaborated with Business Analysts to design requested application enhancements.}
+		%\ressubitem{Worked with Quality Assurance team located in China on bug resolution.}
+		\ressubitem{Provided production support for deployed application.}
+		\ressubitem{Facilitated Tomcat cluster upgrade.}
+		\ressubitem{Automated system administration tasks and performed ad-hoc reporting.}
+		%\ressubitem{Wrote ANT scripts to automate building and pushing development branch code from SVN to development environment.}
+		%\ressubitem{\textbf{Technologies:} Oracle 9i, Tomcat, Java, JDBC, JavaMail, Servlets, JSP, HTML, JQuery, CSS, Perl, SVN}
+	\end{ressubsec}
+	
+	\begin{ressubsec}{Andiamo Partners}{New York, NY}{IT Analyst Intern: November, 2007--April, 2008}
+		\ressubitem{Part of a team responsible for re-implementing internal and external job source applications.}
+		%\ressubitem{Developed new in-place edit interfaces to enable more fluid user interaction.}
+		\ressubitem{Lead the initiative to modularize applications by utilizing the MVC pattern.}
+		%\ressubitem{\textbf{Technologies:} LAMP, HTML, JQuery, CSS}
+		%\ressubitem{Vetted a suitable PHP framework.}
+	\end{ressubsec}
+	
+	\begin{ressubsec}{Brooklyn College Bridges Institute}{Brooklyn, NY}{Web Developer: June, 2006--May 2008}
+		\ressubitem{Designed and implemented institute website using PHP, XHTML, CSS and JavaScript. }
+		\ressubitem{Developed the back-end data store using MySQL.}
+	\end{ressubsec}
+	
+	%\begin{ressubsec}{CAMBA}{Brooklyn, NY}{Application Developer: December, 2006--May, 2007}
+	%	\ressubitem{Designed and implemented a web based helpdesk application in ASP.NET.}
+	%	\ressubitem{Implemented membership and role management providers.}
+	%	\ressubitem{Developed back-end data store using SQL Server.}
+	%\end{ressubsec}
+
+\end{ressection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Achievements and Activities}
+	%\resitem{Member of Golden Key International Honour Society (2008).}
+	
+	\resitem{Member of Brooklyn College RoboCup Soccer team (2007 - 2008).}
+	
+	\resitem{Habitat for Humanity (2006 - Present) -- Most Outstanding Skilled Volunteer (2007).}
+
+	\resitem{Member of the Association for Computing Machinery (2005 - present).}
+	
+	\resitem{Member of Upsilon Pi Epsilon International Honor Society (2005 - present).}
+
+	\resitem{Student member of the Undergraduate Curriculum Committee (2004).}
+	%\resitem{Received departmental scholarship for academic excellence (2004 \& 2008).}
+
+
+\end{ressection}
+
+%\begin{ressection}{References}
+%	\resitem{Available upon request.}
+%\end{ressection}
+
+\end{document}
