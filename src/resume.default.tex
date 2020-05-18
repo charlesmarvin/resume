@@ -1,0 +1,195 @@
+%-------------------------
+% Resume in Latex
+% Author : Marvin Charles
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+  \usepackage{latexsym}
+  \usepackage[empty]{fullpage}
+  \usepackage{titlesec}
+  \usepackage{marvosym}
+  \usepackage[usenames,dvipsnames]{color}
+  \usepackage{verbatim}
+  \usepackage{enumitem}
+  \usepackage[hidelinks]{hyperref}
+  \usepackage{fancyhdr}
+  \usepackage{xifthen}
+  \usepackage{amssymb}
+  
+  
+  \pagestyle{fancy}
+  \fancyhf{} % clear all header and footer fields
+  \fancyfoot{}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+  
+  % Adjust margins
+  \addtolength{\oddsidemargin}{-0.5in}
+  \addtolength{\evensidemargin}{-0.5in}
+  \addtolength{\textwidth}{1in}
+  \addtolength{\topmargin}{-.5in}
+  \addtolength{\textheight}{1in}
+  
+  \urlstyle{same}
+  
+  \raggedbottom
+  \raggedright
+  \setlength{\tabcolsep}{0in}
+  
+  % Sections formatting
+  \titleformat{\section}{
+    \vspace{-4pt}\scshape\raggedright\large
+  }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  
+  %-------------------------
+  % Custom commands
+  \newcommand{\resumeItem}[2]{
+    \item\small{
+      \resumeItembf[#1]{#2 \vspace{-2pt}}
+    }
+  }
+
+  \newcommand{\resumeItembf}[1][]{%
+    \ifthenelse{
+      \isempty{#1}
+    }{}{\textbf{#1} - }%
+  }
+
+  \newcommand{\resumeSubheading}[4]{
+    \vspace{-1pt}\item
+      \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+        \textit{\small#3} & \textit{\small #4} \\
+      \end{tabular*}\vspace{-5pt}
+  }
+  
+  \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+  \renewcommand{\labelitemi}{\tiny$\blacksquare$}
+  \renewcommand{\labelitemii}{--}
+  \renewcommand{\labelitemiii}{$\circ$}
+  
+  \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+  \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+  \newcommand{\resumeItemListStart}{\begin{itemize}}
+  \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+  
+  %-------------------------------------------
+  %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+  
+  \begin{document}
+  
+  %----------HEADING-----------------
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{\Large Marvin M. Charles} &  \href{mailto:marvin.charles@gmail.com}{marvin.charles@gmail.com} {$\cdot$} 718.866.8424 \\
+  \end{tabular*}
+
+  %-----------EXPERIENCE-----------------
+  \section{Experience}
+    \resumeSubHeadingListStart
+  
+      \resumeSubheading
+        {Goldman Sachs}{New York, NY}
+        {Software Engineer}{Jul 2011 - Present}
+        
+        \resumeItemListStart
+        
+           \resumeItem{GS Accelerate - Project Louisa}{VP/Lead}
+            \resumeItemListStart
+              \resumeItem{}{Leading engineering team to build Project Louisa, an expertise search engine as part of the first cohort of funded projects in GS Accelerate - the firm's startup incubator.}
+              \resumeItem{}{Drafted technical architecture, selected tech stack, and formalized the software development process.}
+              \resumeItem{}{Developed engineering roadmap in collaboration with Bengaluru engineering team for deploying on AWS.}
+              \resumeItem{}{Recruited new joiners to GS Accelerate as well as broader firm engineering and product roles.}
+            \resumeItemListEnd
+            
+          \resumeItem{Franchise Analytics, Strategy \& Technology (FAST)}{VP/Lead}
+            \resumeItemListStart
+              \resumeItem{}{Streamlined micro sales and trading workflow by creating a chatbot leveraging Symphony and internal NLP APIs to expedite trade ticket entry.} 
+              \resumeItem{}{Built real-time dashboard for Municipal Bond sales and trading desks allowing sales and traders to quickly react to intraday market events.}
+              \resumeItem{}{Evaluated options for replacing SecDB/Slang based reporting and analytics pipelines and built proof-of-concept leveraging both Spark and Dask.}
+              \resumeItem{}{Guided peers and junior developers through design and code reviews to enhance their technical skills.}
+            \resumeItemListEnd
+            
+          \resumeItem{Marcus by Goldman Sachs}{VP/Lead}
+            \resumeItemListStart
+              \resumeItem{}{Implemented OAuth based consumer facing authentication and inter-service authentication \& authorization.}
+              \resumeItem{}{Developed strategies for scaling services to meet prescribed SLAs across several mission critical services.}
+              \resumeItem{}{Abstracted and standardized several cross-cutting concerns reducing code duplication across the stack.}
+              \resumeItem{}{Managed vendor engagements, negotiated SOWs, and conducted contingent worker appraisals.}
+              \resumeItem{}{Served as divisional Software Development Life Cycle Champion and Application Security Champion as well as mentored junior team members.}            
+            \resumeItemListEnd
+            
+          \resumeItem{Global Credit Technology}{Associate}
+            \resumeItemListStart
+              \resumeItem{}{Designed and implemented award winning real-time market share dashboard for corporate bonds.}
+              \resumeItem{}{Built proof-of-concept for reusable product search widget backed by elastic search to demonstrate the ease of development and flexibility of HTML \& Javascript.}
+              \resumeItem{}{Proposed architecture and built proof-of-concept for In-Memory Data Grid backed data layer currently used by division wide applications.}
+            \resumeItemListEnd
+            
+          \resumeItem{Bank Loans Servicing Technology}{Analyst}
+            \resumeItemListStart
+              \resumeItem{}{Implemented application entitlement framework for bank loan servicing application.}
+              \resumeItem{}{Designed and implemented a dashboard for tracking external agent metrics.}
+            \resumeItemListEnd
+        \resumeItemListEnd
+
+%      \resumeSubheading
+%        {Goldman Sachs}{New York, NY}
+%        {Technology Summer Analyst}{Jun 2010 - Aug 2010}
+%        \resumeItemListStart
+%          \resumeItem{}{Implemented application entitlement framework for bank loan servicing application.}
+%          \resumeItem{}{Designed and implemented a dashboard for tracking external agent metrics.}
+%        \resumeItemListEnd
+
+%      \resumeSubheading
+%        {7thOnline}{New York, NY}
+%        {Software Engineer}{May 2008 - Sep 2009}
+%        \resumeItemListStart
+%          \resumeItem{}
+%            {Developed and maintained the Assortment Planning and Size Optimization SaaS solution.}
+%          \resumeItem{}
+%            {Collaborated with Business Analysts to design requested application enhancements.}
+%          \resumeItem{}
+%            {Provided production support for deployed applications.}
+%          \resumeItem{}
+%            {Automated system administration tasks and performed ad-hoc reporting.}
+%        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+  
+  
+  %-----------PROJECTS-----------------
+%  \section{Projects}
+%    \resumeSubHeadingListStart
+%      \resumeSubItem{Suds}{Flutter application with serverless backend for managing laundry rooms with Stripe payment integration.}
+%      \resumeSubItem{Acipiter}{React based frontend for Collateralized Loan Obligation (CLO) portfolio optimization tool.}
+%      \resumeSubItem{Tritons Leaderboard}{Dashboard for tracking Concept2 rowing stats for the Goldman Sachs Dragon Boat Team.}
+%      \resumeSubItem{Web Pomodoro}{Plain Javascript \& web components implementation of Pomodoro technique for time management.}
+%    \resumeSubHeadingListEnd
+
+
+  %-----------EDUCATION-----------------
+  \section{Education}
+    \resumeSubHeadingListStart
+      \resumeSubheading
+        {Polytechnic Institute of NYU}{Brooklyn, NY}
+        {\textbf{Master of Science} in Computer Science}{May 2011}
+        %{Master of Science in Computer Science;  GPA: 3.96}{May 2011}
+      \resumeSubheading
+        {Brooklyn College of the City University of New York}{Brooklyn, NY}
+        {\textbf{Bachelor of Science} in Computer and Information Science}{May 2008}
+        %{Bachelor of Science in Computer and Information Science;  GPA: 3.79}{May 2008}
+    \resumeSubHeadingListEnd
+
+  
+  %--------PROGRAMMING SKILLS------------
+  \section{Skills}
+   \resumeSubHeadingListStart
+      \resumeSubItem{Languages}{Java, Kotlin, Javascript, Typescript, SQL, Slang, C\#, Python, Go}
+      \resumeSubItem{Technologies}{Spring, Vertx, Ktor, JEE, SecDB, React, Angular, Node.js, Kafka, PostgreSQL, MongoDB, AWS}
+   \resumeSubHeadingListEnd
+  
+  %-------------------------------------------
+  \end{document}
